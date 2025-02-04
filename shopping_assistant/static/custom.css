@@ -42,6 +42,7 @@ form {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 label {
     display: block;
     margin-bottom: 8px;
@@ -109,30 +110,44 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    font-size: 0.95rem;
+    font-size: 1rem; /* Slightly increase font size */
     color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow for a modern look */
+    border-radius: 8px; /* Rounded corners for the table */
+    overflow: hidden; /* Prevent border-radius from affecting inner elements */
 }
 
 table th, table td {
-    border: 1px solid #ddd;
-    padding: 12px;
+    padding: 16px 20px; /* Increase padding for better spacing */
     text-align: left;
+    vertical-align: middle; /* Center align the content vertically */
+    border-bottom: 1px solid #ddd; /* Subtle bottom border */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
 }
 
 table th {
     background-color: #007bff;
     color: #fff;
     font-weight: bold;
+    text-transform: uppercase; /* Capitalize headers for modern touch */
+    letter-spacing: 1px; /* Add some space between letters */
 }
 
 table tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #f4f7fa; /* Light grey background for even rows */
 }
 
 table tr:hover {
-    background-color: #f1f1f1;
+    background-color: #e1eaff; /* Light blue hover effect */
 }
 
+table td {
+    background-color: #fff; /* White background for table data */
+}
+
+table td:last-child, table th:last-child {
+    border-right: none; /* Remove border from the last column */
+}
 
 #loading-spinner {
     position: fixed;
